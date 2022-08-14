@@ -15,7 +15,8 @@ public class Hooks {
 
     public static void openBrowser(){
         // 1- Bridge
-        System.setProperty("webdriver.edge.driver","C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedgedriver.exe");
+        String edgePath=System.getProperty("user.dir");
+        System.setProperty("webdriver.edge.driver",edgePath+ "\\src\\main\\resources\\msedgedriver.exe");
 
         // 2- create object from edge browser
         driver = new EdgeDriver();
